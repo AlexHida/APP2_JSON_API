@@ -21,7 +21,7 @@ class MainActivity2 : AppCompatActivity() {
         val stringRequest: StringRequest = StringRequest(
             Request.Method.GET, url,
             { response ->
-                texto.text = "Respuesta JSON: ${response.substring(0, 800)}"
+                texto.text = "Respuesta JSON: ${response.substring(0, response.length)}"
             },
             { error -> texto.text = "Error!!"
                 error.printStackTrace()
